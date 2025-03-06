@@ -76,7 +76,7 @@ I start with the correlation matrix of the numerical features, and as we can see
 
 #### Box plot of transaction_amount and Statiscal Summary 
 
-![plot3](Plots/Box plot transaction_amount.png)
+<img src="https://github.com/Amityaron/customer-churn-classifi-cation/blob/main/Plots/Box%20plot%20transaction_amount.png" width="40%" height="20%">
 
 ##### Summary of Transaction Amount  
 
@@ -126,7 +126,8 @@ I start with the correlation matrix of the numerical features, and as we can see
 
 #### Histogram of the customers who leave the company by mouth
 
-![plot3](Plots/Histogram of mouth for custumer that leave the company.png)
+
+<img src="https://github.com/Amityaron/customer-churn-classifi-cation/blob/main/Plots/Histogram%20of%20mouth%20for%20custumer%20that%20leave%20the%20company.png" width="40%" height="20%">
 
 #### Apply 3 models: Logistic regression, Random Forest, XGBOOST 
 
