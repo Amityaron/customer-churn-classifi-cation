@@ -1,62 +1,42 @@
 ## Customer-Churn-Classification
 Atidot - DS Assignment 
 
-In this Assignment, I will present a robust classification model that predicts which customers will churn between
+In this assignment, I have developed a robust classification model that predicts customer churn between January 1, 2024, and February 28, 2024, using time-series data with a double index (customer_id and date). This task demonstrates my skills in modeling, feature engineering, and production-aware design practices.
 
-Jan. 1, 2024 and Feb. 28, 2024, using time-series data with a double index (customer_id and date).
+### Dataset Overview
+The dataset contains the following features:
 
-Demonstrate modeling and feature engineering skills, as well as production-aware design practices.
+**customer_id:** Unique identifier for each customer.
+**date:** The date of the transaction, ranging from January 1, 2023, to December 31, 2023.
+**transaction_amount:** Numerical feature representing the amount spent by the customer.
+**plan_type:** Categorical feature indicating the type of plan (Basic, Standard, Premium).
+**churn:** Binary target variable where 1 indicates the customer has churned, and 0 means they have stayed.
+**issuing_date:** The date when the customer first purchased the insurance.
 
-The data set contains the following features :
+### Data Preprocessing and Feature Engineering
+Handling Missing Values: I filled missing values in the transaction_amount feature using the mean value of the transaction_amount for the same plan_type. 
 
-1.**customer_id**
-
-2.**date** from 1.1.2023 until the end of the year. (date feature)
-
-3.**transaction_amount**	(numerical feature)
-
-4.**plan_type**: Basic, Strandrad, Premium (categorical feature) 
-
-5.**churn**	(1= The customer leaves the company, 0= The customer stays  the company)
-
-6.**issuing_date** When the customer buys the insurance.
-
-I start by filling NaN in the data set by the following role, replacing Nan for each customer by the mean of the transaction_amount with the same plan_type.
-
-For example 
-
+For example, for a customer with a missing value, I replaced it with the average of the transaction_amount values for customers with the same plan_type.
+ 
 | customer_id | date                   | transaction_amount | plan_type | churn | issuing_date          |
 |------------|------------------------|--------------------|-----------|-------|------------------------|
-| CUST_1     | 2023-01-01 00:00:00     | 193.5246582        | Basic     | 0     | 2021-03-01 00:00:00     |
-| CUST_1     | 2023-02-01 00:00:00     | 303.3426573        | Standard  | 0     | 2021-03-01 00:00:00     |
-| CUST_1     | 2023-03-01 00:00:00     | 38.46096996        | Standard  | 0     | 2021-03-01 00:00:00     |
-| CUST_1     | 2023-04-01 00:00:00     | 356.9555631        | Premium   | 0     | 2021-03-01 00:00:00     |
-| CUST_1     | 2023-05-01 00:00:00     | 417.896894         | Standard  | 0     | 2021-03-01 00:00:00     |
 | CUST_1     | 2023-06-01 00:00:00     | **NaN**            | Premium   | 0     | 2021-03-01 00:00:00     |
-| CUST_1     | 2023-07-01 00:00:00     | 221.6530591        | Standard  | 0     | 2021-03-01 00:00:00     |
-| CUST_1     | 2023-08-01 00:00:00     | 78.35199172        | Standard  | 0     | 2021-03-01 00:00:00     |
-| CUST_1     | 2023-09-01 00:00:00     | 233.4742923        | Premium   | 0     | 2021-03-01 00:00:00     |
-| CUST_1     | 2023-10-01 00:00:00     | 261.9748748        | Standard  | 1     | 2021-03-01 00:00:00     |
-| CUST_1     | 2023-11-01 00:00:00     | 307.6969774        | Basic     | 1     | 2021-03-01 00:00:00     |
 
 
  **NaN** = (356.9555631 + 233.4742923 )/2
- 
-Then I Add three relevant date-dependent features : 
 
-1. **date_mouth** : The mouth of the data.
+ ### Date-dependent Features: Three relevant date-dependent features were created to enhance the model:
 
-2. **plan_changes**: When the customer changes is plan type ( 1=  the customer changes is plan type , 0= the customer did not changes is plan type )
-
-3. **plan_changes_total_changes**: How many changes did he customer make in 2023
-
-4. **date_minus_issuing_date**: The number of days between the data and issuing_date.
+**date_month:** The month of the year corresponding to the transaction date.
+**plan_changes:** Binary feature indicating whether the customer changed their plan type (1 = change, 0 = no change).
+**plan_changes_total_changes:** The total number of plan changes for the customer in 2023.
+**date_minus_issuing_date:** The number of days between the transaction date and the issuing date
 
 ### Exploratory data analysis of the data frame
 
-I start with the correlation matrix of the numerical features, and as we can see, there is no linear connection between the numerical features.
-
 #### Corrlation Matrix
+
+I performed a correlation analysis to examine relationships between numerical features. The correlation matrix showed no significant linear relationships between the features.
 
 | Feature                      | transaction_amount | plan_changes_total_changes | date_minus_issuing_date |
 |------------------------------|--------------------|---------------------------|-------------------------|
@@ -67,6 +47,8 @@ I start with the correlation matrix of the numerical features, and as we can see
 
 #### Histogram of the date_minus_issuing_date belonging to the customers that leave the company 
 
+Histogram of date_minus_issuing_date: This visualization shows the distribution of date_minus_issuing_date for customers who churned.
+
 <img src="https://github.com/Amityaron/customer-churn-classifi-cation/blob/main/Plots/Histogram%20of%20the%20date_minus_issuing_date%20.png" width="40%" height="40%">
 
 
@@ -74,7 +56,11 @@ I start with the correlation matrix of the numerical features, and as we can see
 
 <img src="https://github.com/Amityaron/customer-churn-classifi-cation/blob/main/Plots/Box%20plot%20transaction_amount%20for%20each%20plan%20type.png" width="40%" height="40%">
 
-#### Box plot of transaction_amount and Statiscal Summary 
+#### Box plot of transaction_amount and Statiscal Summary
+
+Box plot of transaction_amount for each plan type: 
+
+The box plot illustrates the distribution of transaction amounts for customers who stayed versus those who churned.
 
 <img src="https://github.com/Amityaron/customer-churn-classifi-cation/blob/main/Plots/Box%20plot%20transaction_amount.png" width="40%" height="40%">
 
@@ -129,9 +115,9 @@ I start with the correlation matrix of the numerical features, and as we can see
 
 <img src="https://github.com/Amityaron/customer-churn-classifi-cation/blob/main/Plots/Histogram%20of%20mouth%20for%20custumer%20that%20leave%20the%20company.png" width="40%" height="40%">
 
-#### Apply 3 models: Logistic regression, Random Forest, XGBOOST 
+#### Model Development and Evaluation
 
-For model I split into training & testing sets (80% train, 20% test)
+I applied three classification models: Logistic Regression, Random Forest, and XGBoost. The dataset was split into training and testing sets (80% for training, 20% for testing).
  
 ##### Logistic regression performance  : 
 
@@ -233,6 +219,10 @@ For model I split into training & testing sets (80% train, 20% test)
 | **plan_type_Premium**           | 61.0        |
 | **plan_type_Standard**          | 96.0        |
 
+### Conclusion
 
+The model achieved a strong performance, with XGBoost yielding the highest accuracy of 0.75, followed by Random Forest (0.74) and Logistic Regression (0.69).
+
+Based on the feature importance analysis, it is evident that the transaction_amount, date_minus_issuing_date, and date_month are the most influential features in predicting customer churn.
 
 
