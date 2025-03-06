@@ -6,10 +6,15 @@ Demonstrate modeling and feature engineering skills, as well as production-aware
 The data set contains the following features :
 
 1.customer_id
+
 2.date from 1.1.2023 until the end of the year.
+
 3.transaction_amount	
+
 4.plan_type	(Basic, Strandrad, Premium) categorical feature 
+
 5.churn	(1= The customer leaves the company, 0= The customer stays  the company)
+
 6.issuing_date When the customer buys the insurance.
 
 I start by filling NaN in the data set by the following role, replacing Nan for each customer by the mean of the transaction_amount with the same plan_type.
