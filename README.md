@@ -97,6 +97,52 @@ I start with the correlation matrix of the numerical features, and as we can see
 | Max        | 490.78  |
 
 
+## Summary of Transaction Amount  
+
+<table>
+  <tr>
+    <th colspan="2">Churned Customers</th>
+    <th colspan="2">Retained Customers</th>
+  </tr>
+  <tr>
+    <td><b>Statistic</b></td><td><b>Value</b></td>
+    <td><b>Statistic</b></td><td><b>Value</b></td>
+  </tr>
+  <tr>
+    <td>Count</td><td>47</td>
+    <td>Count</td><td>53</td>
+  </tr>
+  <tr>
+    <td>Mean</td><td>232.45</td>
+    <td>Mean</td><td>244.96</td>
+  </tr>
+  <tr>
+    <td>Std Dev</td><td>154.67</td>
+    <td>Std Dev</td><td>147.75</td>
+  </tr>
+  <tr>
+    <td>Min</td><td>10.07</td>
+    <td>Min</td><td>14.89</td>
+  </tr>
+  <tr>
+    <td>25%</td><td>89.22</td>
+    <td>25%</td><td>122.90</td>
+  </tr>
+  <tr>
+    <td>50% (Median)</td><td>248.14</td>
+    <td>50% (Median)</td><td>206.42</td>
+  </tr>
+  <tr>
+    <td>75%</td><td>364.89</td>
+    <td>75%</td><td>387.75</td>
+  </tr>
+  <tr>
+    <td>Max</td><td>492.64</td>
+    <td>Max</td><td>490.78</td>
+  </tr>
+</table>
+
+
 #### 
 
 
