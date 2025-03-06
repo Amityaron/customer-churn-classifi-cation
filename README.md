@@ -46,9 +46,11 @@ Then I Add three relevant date-dependent features :
 
 3.**plan_changes_total_changes**: How many changes did he customer make in 2023
 
+4.**date_minus_issuing_date** 
+
 ### Exploratory data analysis of the data frame
 
-I start with the correlation Matrix of the numerical features as we can see there is linear connetion between the numerical features.
+I start with the correlation matrix of the numerical features, and as we can see, there is no linear connection between the numerical features.
 
 #### corrlation Matrix
 
@@ -57,5 +59,9 @@ I start with the correlation Matrix of the numerical features as we can see ther
 | **transaction_amount**        | 1.000000          | -0.034869                 | 0.003824                |
 | **plan_changes_total_changes** | -0.034869         | 1.000000                  | 0.022887                |
 | **date_minus_issuing_date**   | 0.003824          | 0.022887                  | 1.000000                |
+
+
+
+#### 
 
 
