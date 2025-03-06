@@ -25,11 +25,14 @@ For example, for a customer with a missing value, I replaced it with the average
 
  **NaN** = (356.9555631 + 233.4742923 )/2
 
- ### Date-dependent Features: Three relevant date-dependent features were created to enhance the model:
+ ### Date-dependent Features: Four relevant date-dependent features were created to enhance the model:
 
 **date_month:** The month of the year corresponding to the transaction date.
+
 **plan_changes:** Binary feature indicating whether the customer changed their plan type (1 = change, 0 = no change).
+
 **plan_changes_total_changes:** The total number of plan changes for the customer in 2023.
+
 **date_minus_issuing_date:** The number of days between the transaction date and the issuing date
 
 ### Exploratory data analysis of the data frame
@@ -223,6 +226,12 @@ I applied three classification models: Logistic Regression, Random Forest, and X
 
 The model achieved a strong performance, with XGBoost yielding the highest accuracy of 0.75, followed by Random Forest (0.74) and Logistic Regression (0.69).
 
-Based on the feature importance analysis, it is evident that the transaction_amount, date_minus_issuing_date, and date_month are the most influential features in predicting customer churn.
+Based on the feature importance analysis, it is evident that 
+
+1. transaction_amount,
+2. date_minus_issuing_date, and
+3. date_month
+
+are the most influential features in predicting customer churn.
 
 
