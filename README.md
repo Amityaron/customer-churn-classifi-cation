@@ -38,13 +38,24 @@ For example
 
  **NaN** = (356.9555631 + 233.4742923 )/2
  
-Then I Add two relevant date-dependent features : 
+Then I Add three relevant date-dependent features : 
 
-1. **date_mout**h :
+1. **date_mouth** : The mouth of the data.
 
-2. **plan_changes** :
+2. **plan_changes**: When the customer changes is plan type.
 
-3.**plan_changes_total_changes** : 
+3.**plan_changes_total_changes**: How many changes did he customer make in 2023
 
+### Exploratory data analysis of the data frame
+
+I start with the correlation Matrix of the numerical features as we can see there is linear connetion between the numerical features.
+
+#### corrlation Matrix
+
+| Feature                      | transaction_amount | plan_changes_total_changes | date_minus_issuing_date |
+|------------------------------|--------------------|---------------------------|-------------------------|
+| **transaction_amount**        | 1.000000          | -0.034869                 | 0.003824                |
+| **plan_changes_total_changes** | -0.034869         | 1.000000                  | 0.022887                |
+| **date_minus_issuing_date**   | 0.003824          | 0.022887                  | 1.000000                |
 
 
