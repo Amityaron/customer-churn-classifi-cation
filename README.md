@@ -61,7 +61,44 @@ I start with the correlation matrix of the numerical features, and as we can see
 | **date_minus_issuing_date**   | 0.003824          | 0.022887                  | 1.000000                |
 
 
-#### Histogram of the date_minus_issuing_date belong the customer that leave the compamy 
+#### Histogram of the date_minus_issuing_date belonging to the customers that leave the company 
+
+#### Box plot of transaction_amount and statiscal summery 
+
+
+##### Summary of Transaction Amount  
+
+###### Churned Customers  
+
+| Statistic  | Value    |
+|------------|---------|
+| Count      | 47      |
+| Mean       | 232.45  |
+| Std Dev    | 154.67  |
+| Min        | 10.07   |
+| 25%        | 89.22   |
+| 50% (Median) | 248.14  |
+| 75%        | 364.89  |
+| Max        | 492.64  |
+
+---
+
+###### Retained Customers  
+
+| Statistic  | Value    |
+|------------|---------|
+| Count      | 53      |
+| Mean       | 244.96  |
+| Std Dev    | 147.75  |
+| Min        | 14.89   |
+| 25%        | 122.90  |
+| 50% (Median) | 206.42  |
+| 75%        | 387.75  |
+| Max        | 490.78  |
+
+
+#### 
+
 
 
 
