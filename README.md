@@ -119,6 +119,7 @@ I start with the correlation matrix of the numerical features, and as we can see
 
 
 #### Apply 3 models: Logistic regression, Random Forest, XGBOOST 
+
 For model I split into training & testing sets (80% train, 20% test)
  
 ##### Logistic regression performance  : 
@@ -126,7 +127,7 @@ For model I split into training & testing sets (80% train, 20% test)
 ###### Accuracy  
 **Accuracy:** 0.69  
 
-####### Confusion Matrix  
+###### Confusion Matrix  
 | Actual \ Predicted | 0  | 1  |
 |--------------------|----|----|
 | **0** (Stay)      | 151 | 12 |
@@ -155,11 +156,72 @@ For model I split into training & testing sets (80% train, 20% test)
 | **date_minus_issuing_date**     | -0.421579    |
 
 
-##### Random Forest: 
+##### Random Forest performance : 
+ 
+###### Accuracy  
+**Accuracy:** 0.74  
+
+###### Confusion Matrix  
+| Actual \ Predicted | 0  | 1  |
+|--------------------|----|----|
+| **0** (Stay)       | 145 | 18 |
+| **1** (Churn)      | 45  | 32 |
+
+###### Classification Report
+
+| Class               | Precision | Recall | F1-Score | Support |
+|---------------------|-----------|--------|----------|---------|
+| **0** (Stay)        | 0.76      | 0.89   | 0.82     | 163     |
+| **1** (Churn)       | 0.64      | 0.42   | 0.50     | 77      |
+| **Accuracy**        |           |        | 0.74     | 240     |
+| **Macro Avg**       | 0.70      | 0.65   | 0.66     | 240     |
+| **Weighted Avg**    | 0.72      | 0.74   | 0.72     | 240     |
+
+###### Feature Importance  
+| Feature                         | Importance  |
+|---------------------------------|-------------|
+| **date_minus_issuing_date**     | 0.292386    |
+| **transaction_amount**          | 0.276920    |
+| **date_mouth**                  | 0.198031    |
+| **plan_changes_total_changes**  | 0.155698    |
+| **plan_type_Standard**          | 0.027657    |
+| **plan_changes**                | 0.025918    |
+| **plan_type_Premium**           | 0.023391    |
 
 
 
-##### XGBOOST: 
+##### XGBOOST performance: 
+
+###### Accuracy  
+**Accuracy:** 0.75  
+
+###### Confusion Matrix  
+| Actual \ Predicted | 0  | 1  |
+|--------------------|----|----|
+| **0** (Stay)       | 140 | 23 |
+| **1** (Churn)      | 36  | 41 |
+
+###### Classification Report
+
+| Class               | Precision | Recall | F1-Score | Support |
+|---------------------|-----------|--------|----------|---------|
+| **0** (Stay)        | 0.80      | 0.86   | 0.83     | 163     |
+| **1** (Churn)       | 0.64      | 0.53   | 0.58     | 77      |
+| **Accuracy**        |           |        | 0.75     | 240     |
+| **Macro Avg**       | 0.72      | 0.70   | 0.70     | 240     |
+| **Weighted Avg**    | 0.75      | 0.75   | 0.75     | 240     |
+
+###### Feature Importance  
+| Feature                         | Importance  |
+|---------------------------------|-------------|
+| **transaction_amount**          | 736.0       |
+| **date_minus_issuing_date**     | 695.0       |
+| **date_mouth**                  | 242.0       |
+| **plan_changes**                | 37.0        |
+| **plan_changes_total_changes**  | 358.0       |
+| **plan_type_Premium**           | 61.0        |
+| **plan_type_Standard**          | 96.0        |
+
 
 
 
