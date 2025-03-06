@@ -1,2 +1,2 @@
-# customer-churn-classifi-cation
+# customer-churn-classification
 Atidot - DS Assignment 
