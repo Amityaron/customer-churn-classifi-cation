@@ -17,6 +17,7 @@ I start by filling Nan in the data set by the following role, replacing Nan for 
 For example : 
 
 customer_id	| date	            | transaction_amount	| plan_type | 	churn	| issuing_date	
+
 0	CUST_1 |	2023-01-01 00:00:00 |	193.5246582	        |   Basic	  |      0	| 2021-03-01 00:00:00	
 1	CUST_1 |	2023-02-01 00:00:00	| 303.3426573	        |   Standard|	    0	  | 2021-03-01 00:00:00	
 2	CUST_1 |	2023-03-01 00:00:00	| 38.46096996	        |   Standard|	    0	  | 2021-03-01 00:00:00	
