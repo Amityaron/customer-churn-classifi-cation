@@ -42,11 +42,11 @@ Then I Add three relevant date-dependent features :
 
 1. **date_mouth** : The mouth of the data.
 
-2. **plan_changes**: When the customer changes is plan type.
+2. **plan_changes**: When the customer changes is plan type ( 1=  the customer changes is plan type , 0= the customer did not changes is plan type )
 
-3.**plan_changes_total_changes**: How many changes did he customer make in 2023
+3. **plan_changes_total_changes**: How many changes did he customer make in 2023
 
-4.**date_minus_issuing_date** 
+4. **date_minus_issuing_date**: The numebr of days between the data and issuing_date.
 
 ### Exploratory data analysis of the data frame
 
