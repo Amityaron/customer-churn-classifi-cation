@@ -12,9 +12,9 @@ The data set contains the following features :
 5.churn	(1= The customer leaves the company, 0= The customer stays  the company)
 6.issuing_date When the customer buys the insurance.
 
-I start by filling Nan in the data set by the following role, replacing Nan for each customer by the mean of the transaction_amount with the same plan_type.
+I start by filling NaN in the data set by the following role, replacing Nan for each customer by the mean of the transaction_amount with the same plan_type.
 
-For exmple 
+For example 
 
 | customer_id | date                   | transaction_amount | plan_type | churn | issuing_date          |
 |------------|------------------------|--------------------|-----------|-------|------------------------|
@@ -30,6 +30,10 @@ For exmple
 | CUST_1     | 2023-10-01 00:00:00     | 261.9748748        | Standard  | 1     | 2021-03-01 00:00:00     |
 | CUST_1     | 2023-11-01 00:00:00     | 307.6969774        | Basic     | 1     | 2021-03-01 00:00:00     |
 
+
+ **NaN** = (356.9555631 + 233.4742923 )/2
+
+ 
 
 
 
