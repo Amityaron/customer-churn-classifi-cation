@@ -67,12 +67,12 @@ I start with the correlation matrix of the numerical features, and as we can see
 
 #### Histogram of the date_minus_issuing_date belonging to the customers that leave the company 
 
-![plot1](Plots/Histogram of the date_minus_issuing_date.png)
+<img src="https://github.com/Amityaron/customer-churn-classifi-cation/blob/main/Plots/Histogram%20of%20the%20date_minus_issuing_date%20.png" width="40%" height="20%">
 
 
 #### Box plot of transaction_amount for each plan type for customers that leave/stay in the company 
 
-![plot2](Plots/Box plot transaction_amount for each plan type.png)
+<img src="https://github.com/Amityaron/customer-churn-classifi-cation/blob/main/Plots/Box%20plot%20transaction_amount%20for%20each%20plan%20type.png" width="40%" height="20%">
 
 #### Box plot of transaction_amount and Statiscal Summary 
 
