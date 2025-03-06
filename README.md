@@ -11,7 +11,7 @@ The data set contains the following features :
 
 3.**transaction_amount**	(numerical feature)
 
-4.**plan_type**	: Basic, Strandrad, Premium (categorical feature) 
+4.**plan_type**: Basic, Strandrad, Premium (categorical feature) 
 
 5.**churn**	(1= The customer leaves the company, 0= The customer stays  the company)
 
@@ -63,41 +63,12 @@ I start with the correlation matrix of the numerical features, and as we can see
 
 #### Histogram of the date_minus_issuing_date belonging to the customers that leave the company 
 
-#### Box plot of transaction_amount and statiscal summery 
+#### Box plot of transaction_amount for each plan type for customers that leave/stay in the company 
 
+
+#### Box plot of transaction_amount and Statiscal Summary 
 
 ##### Summary of Transaction Amount  
-
-###### Churned Customers  
-
-| Statistic  | Value    |
-|------------|---------|
-| Count      | 47      |
-| Mean       | 232.45  |
-| Std Dev    | 154.67  |
-| Min        | 10.07   |
-| 25%        | 89.22   |
-| 50% (Median) | 248.14  |
-| 75%        | 364.89  |
-| Max        | 492.64  |
-
----
-
-###### Retained Customers  
-
-| Statistic  | Value    |
-|------------|---------|
-| Count      | 53      |
-| Mean       | 244.96  |
-| Std Dev    | 147.75  |
-| Min        | 14.89   |
-| 25%        | 122.90  |
-| 50% (Median) | 206.42  |
-| 75%        | 387.75  |
-| Max        | 490.78  |
-
-
-## Summary of Transaction Amount  
 
 <table>
   <tr>
@@ -143,8 +114,54 @@ I start with the correlation matrix of the numerical features, and as we can see
 </table>
 
 
-#### 
+#### Histogram of the customers who leave the company by mouth
 
+
+
+#### Apply 3 models: Logistic regression, Random Forest, XGBOOST 
+For model I Split into training & testing sets (80% train, 20% test)
+ 
+##### Logistic regression: 
+
+###### Model Performance  
+
+####### Accuracy  
+**Accuracy:** 0.69  
+
+####### Confusion Matrix  
+| Actual \ Predicted | 0  | 1  |
+|--------------------|----|----|
+| **0** (Stay)      | 151 | 12 |
+| **1** (Churn)     | 62  | 15 |
+
+####### Classification Report
+
+| Class               | Precision | Recall | F1-Score | Support |
+|---------------------|-----------|--------|----------|---------|
+| **0** (Stay)        | 0.71      | 0.93   | 0.80     | 163     |
+| **1** (Churn)       | 0.56      | 0.19   | 0.29     | 77      |
+| **Accuracy**        |           |        | 0.69     | 240     |
+| **Macro Avg**       | 0.63      | 0.56   | 0.55     | 240     |
+| **Weighted Avg**    | 0.66      | 0.69   | 0.64     | 240     |
+
+
+####### Feature Importance  
+| Feature                         | Coefficient  |
+|---------------------------------|--------------|
+| **date_mouth**                  | 0.790085     |
+| **transaction_amount**          | 0.054664     |
+| **plan_type_Premium**           | -0.013193    |
+| **plan_type_Standard**          | -0.051589    |
+| **plan_changes**                | -0.057033    |
+| **plan_changes_total_changes**  | -0.193752    |
+| **date_minus_issuing_date**     | -0.421579    |
+
+
+##### Random Forest: 
+
+
+
+##### XGBOOST: 
 
 
 
