@@ -67,16 +67,16 @@ I start with the correlation matrix of the numerical features, and as we can see
 
 #### Histogram of the date_minus_issuing_date belonging to the customers that leave the company 
 
-<img src="https://github.com/Amityaron/customer-churn-classifi-cation/blob/main/Plots/Histogram%20of%20the%20date_minus_issuing_date%20.png" width="40%" height="20%">
+<img src="https://github.com/Amityaron/customer-churn-classifi-cation/blob/main/Plots/Histogram%20of%20the%20date_minus_issuing_date%20.png" width="40%" height="40%">
 
 
 #### Box plot of transaction_amount for each plan type for customers that leave/stay in the company 
 
-<img src="https://github.com/Amityaron/customer-churn-classifi-cation/blob/main/Plots/Box%20plot%20transaction_amount%20for%20each%20plan%20type.png" width="40%" height="20%">
+<img src="https://github.com/Amityaron/customer-churn-classifi-cation/blob/main/Plots/Box%20plot%20transaction_amount%20for%20each%20plan%20type.png" width="40%" height="40%">
 
 #### Box plot of transaction_amount and Statiscal Summary 
 
-<img src="https://github.com/Amityaron/customer-churn-classifi-cation/blob/main/Plots/Box%20plot%20transaction_amount.png" width="40%" height="20%">
+<img src="https://github.com/Amityaron/customer-churn-classifi-cation/blob/main/Plots/Box%20plot%20transaction_amount.png" width="40%" height="40%">
 
 ##### Summary of Transaction Amount  
 
@@ -127,7 +127,7 @@ I start with the correlation matrix of the numerical features, and as we can see
 #### Histogram of the customers who leave the company by mouth
 
 
-<img src="https://github.com/Amityaron/customer-churn-classifi-cation/blob/main/Plots/Histogram%20of%20mouth%20for%20custumer%20that%20leave%20the%20company.png" width="40%" height="20%">
+<img src="https://github.com/Amityaron/customer-churn-classifi-cation/blob/main/Plots/Histogram%20of%20mouth%20for%20custumer%20that%20leave%20the%20company.png" width="40%" height="40%">
 
 #### Apply 3 models: Logistic regression, Random Forest, XGBOOST 
 
