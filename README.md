@@ -67,7 +67,7 @@ I start with the correlation matrix of the numerical features, and as we can see
 
 #### Histogram of the date_minus_issuing_date belonging to the customers that leave the company 
 
-![Alt text](Plots/Histogram of the date_minus_issuing_date .png)
+![Alt text] (Plots/Histogram of the date_minus_issuing_date .png)
 
 
 #### Box plot of transaction_amount for each plan type for customers that leave/stay in the company 
