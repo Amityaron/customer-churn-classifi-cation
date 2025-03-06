@@ -119,13 +119,11 @@ I start with the correlation matrix of the numerical features, and as we can see
 
 
 #### Apply 3 models: Logistic regression, Random Forest, XGBOOST 
-For model I Split into training & testing sets (80% train, 20% test)
+For model I split into training & testing sets (80% train, 20% test)
  
-##### Logistic regression: 
+##### Logistic regression performance  : 
 
-###### Model Performance  
-
-####### Accuracy  
+###### Accuracy  
 **Accuracy:** 0.69  
 
 ####### Confusion Matrix  
@@ -134,7 +132,7 @@ For model I Split into training & testing sets (80% train, 20% test)
 | **0** (Stay)      | 151 | 12 |
 | **1** (Churn)     | 62  | 15 |
 
-####### Classification Report
+###### Classification Report
 
 | Class               | Precision | Recall | F1-Score | Support |
 |---------------------|-----------|--------|----------|---------|
@@ -145,7 +143,7 @@ For model I Split into training & testing sets (80% train, 20% test)
 | **Weighted Avg**    | 0.66      | 0.69   | 0.64     | 240     |
 
 
-####### Feature Importance  
+###### Feature Importance  
 | Feature                         | Coefficient  |
 |---------------------------------|--------------|
 | **date_mouth**                  | 0.790085     |
