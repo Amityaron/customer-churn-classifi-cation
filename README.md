@@ -228,8 +228,8 @@ The model achieved a strong performance, with XGBoost yielding the highest accur
 
 Based on the feature importance analysis, it is evident that 
 
-1. transaction_amount,
-2. date_minus_issuing_date, and
+1. transaction_amount
+2. date_minus_issuing_date
 3. date_month
 
 are the most influential features in predicting customer churn.
