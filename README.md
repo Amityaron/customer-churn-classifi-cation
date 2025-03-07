@@ -252,7 +252,12 @@ are the most influential features in predicting customer churn.
 
 Based on game theory, SHAP assigns an importance value to each feature for a given prediction.
 
-$\phi_i = \sum_{S \subseteq N \setminus \{i\}} \frac{|S|! (|N| - |S| - 1)!}{|N|!} \left[ f(S \cup \{i\}) - f(S) \right]$
+SHAP aims to fairly assign a value to each feature $x_i$
+
+based on its contribution to the model’s prediction for an instance.
+
+
+$\phi_i(f) = \sum_{S \subseteq N \setminus \{i\}} \frac{|S|! (|N| - |S| - 1)!}{|N|!} \left[ f(S \cup \{i\}) - f(S) \right]$
 
 Explanation of Terms:
 
@@ -260,8 +265,15 @@ Explanation of Terms:
 * $N$ :  The set of all features.
 * $f(S)$ : The model’s prediction when using only the features in subset $S$
 *  $f(S∪{i}):$ The model’s prediction when feature $i$ is added to $S$
-* $\left|S\right|! \cdot \frac{\left|\left|N\right|\right| - \left|\left|S\right|\right| - 1!}{\left|\left|N\right|\right|!}$ :A weight that ensures all subsets are considered fairly
+* $\frac{\left|S\right|! \cdot \left(\left|\left|N\right|\right| - \left|\left|S\right|\right| - 1 \right)!}{\left|\left|N\right|\right|!}$ :A weight that ensures all subsets are considered fairly.
 
+ SHAP values have the following key properties that make them attractive for model interpretability:
+
+Local Accuracy (Model Explanation): The sum of the SHAP values for all features is equal to the model’s prediction. That is, for a given instance $x$
+ we have:
+$$
+f(x)=\sum^{d}_{i=1}\phi_i(f)+\phi_{bias}
+$$
   
   
 
