@@ -304,6 +304,7 @@ XGBoost minimizes a **regularized loss function** that combines the residual err
 
 $L(\theta) = \sum_{i=1}^{n} \ell(y_i, \hat{y}_i) + \sum_{k=1}^{T} \Omega(f_k)$
 
+
 Where:
 - $\( \ell(y_i, \hat{y}_i) \)$ is the loss function (e.g., mean squared error for regression or log loss for classification).
 - $\( \Omega(f_k) = \gamma T_k + \frac{1}{2} \lambda ||w_k||^2 \)$ is the regularization term that penalizes the complexity of each tree (measured by the number of leaves $\( T_k \)$
