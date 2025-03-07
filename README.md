@@ -187,7 +187,7 @@ I applied three classification models: Logistic Regression, Random Forest, and X
 | **Macro Avg**       | 0.83      | 0.77   | 0.79     | 240     |
 | **Weighted Avg**    | 0.83      | 0.83   | 0.82     | 240     |
 
-## Feature Importance  
+###### Feature Importance  
 
 | Feature                         | Importance  |
 |---------------------------------|-------------|
