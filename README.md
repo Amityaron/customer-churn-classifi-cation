@@ -7,10 +7,15 @@ In this assignment, I have developed a robust classification model that predicts
 The dataset contains the following features:
 
 **customer_id:** Unique identifier for each customer.
+
 **date:** The date of the transaction, ranging from January 1, 2023, to December 31, 2023.
+
 **transaction_amount:** Numerical feature representing the amount spent by the customer.
+
 **plan_type:** Categorical feature indicating the type of plan (Basic, Standard, Premium).
+
 **churn:** Binary target variable where 1 indicates the customer has churned, and 0 means they have stayed.
+
 **issuing_date:** The date when the customer first purchased the insurance.
 
 ### Data Preprocessing and Feature Engineering
