@@ -302,7 +302,7 @@ Where:
 XGBoost minimizes a **regularized loss function** that combines the residual error and a penalty for the complexity of the tree. The objective function to minimize is:
 
 
-$L(θ) = \sum_{i=1}^{n} \ell(y_i,\hat{y}_i) + \sum_{k=1}^{T} \Omega(f_k)$
+$L(θ) = \sum_{i=1}^{n} \ell(y_i,\hat{y_i}) + \sum_{k=1}^{T} \Omega(f_k)$
 
 
 
