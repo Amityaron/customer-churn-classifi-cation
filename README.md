@@ -244,9 +244,16 @@ are the most influential features in predicting customer churn.
 ##### XGBOOST model explanation: 
 
 1. SHAP (SHapley Additive exPlanations)
-2. 
+2. XGBOOST model explanation
 
 ###### SHAP (SHapley Additive exPlanations)
 
+<img src="https://github.com/Amityaron/customer-churn-classifi-cation/blob/main/Plots/SAHP%20plot.png" width="40%" height="40%">
+
 Based on game theory, SHAP assigns an importance value to each feature for a given prediction.
+
+\phi_i = \sum_{S \subseteq N \setminus \{i\}} \frac{|S|! (|N| - |S| - 1)!}{|N|!} \left[ f(S \cup \{i\}) - f(S) \right]
+
+
+
 
