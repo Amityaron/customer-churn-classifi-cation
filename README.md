@@ -40,6 +40,8 @@ For example, for a customer with a missing value, I replaced it with the average
 
 **date_minus_issuing_date:** The number of days between the transaction date and the issuing date
 
+**chunk_id** customer_id we used it to verify when we split the data into train and test, we don't cut customer in the middle of the year
+ 
 ### Exploratory data analysis of the data frame
 
 #### Corrlation Matrix
