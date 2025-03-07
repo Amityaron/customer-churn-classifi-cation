@@ -252,8 +252,9 @@ are the most influential features in predicting customer churn.
 
 Based on game theory, SHAP assigns an importance value to each feature for a given prediction.
 
+$
 \phi_i = \sum_{S \subseteq N \setminus \{i\}} \frac{|S|! (|N| - |S| - 1)!}{|N|!} \left[ f(S \cup \{i\}) - f(S) \right]
-
+$
 
 
 
