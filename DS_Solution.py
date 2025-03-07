@@ -34,6 +34,7 @@ def ReadCSVfile(file_path):
   # Apply function
   df_filled = fill_transaction_amount(df)
   df=df_filled
+  df['chunk_id'] = df['customer_id'].factorize()[0] + 1 
   return df
 
 
