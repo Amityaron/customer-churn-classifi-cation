@@ -30,7 +30,7 @@ For example, for a customer with a missing value, I replaced it with the average
 
  **NaN** = (356.9555631 + 233.4742923 )/2
 
- ### Date-dependent Features: Four relevant date-dependent features were created to enhance the model:
+ ### Date-dependent Features: Five relevant date-dependent features were created to enhance the model:
 
 **date_month:** The month of the year corresponding to the transaction date.
 
@@ -40,7 +40,7 @@ For example, for a customer with a missing value, I replaced it with the average
 
 **date_minus_issuing_date:** The number of days between the transaction date and the issuing date
 
-**chunk_id** customer_id we used it to verify when we split the data into train and test, we don't cut customer in the middle of the year
+**chunk_id**: customer_id  we used it to verify when we split the data into train and test, we don't cut the customer in the middle of the year.
  
 ### Exploratory data analysis of the data frame
 
@@ -48,11 +48,12 @@ For example, for a customer with a missing value, I replaced it with the average
 
 I performed a correlation analysis to examine relationships between numerical features. The correlation matrix showed no significant linear relationships between the features.
 
-| Feature                      | transaction_amount | plan_changes_total_changes | date_minus_issuing_date |
-|------------------------------|--------------------|---------------------------|-------------------------|
-| **transaction_amount**        | 1.000000          | -0.034869                 | 0.003824                |
-| **plan_changes_total_changes** | -0.034869         | 1.000000                  | 0.022887                |
-| **date_minus_issuing_date**   | 0.003824          | 0.022887                  | 1.000000                |
+| Feature                      | transaction_amount | plan_changes_total_changes | date_minus_issuing_date | chunk_id |
+|------------------------------|--------------------|---------------------------|-------------------------|----------|
+| **transaction_amount**        | 1.000000          | -0.034869                 | 0.003824                | 0.022387 |
+| **plan_changes_total_changes** | -0.034869         | 1.000000                  | 0.022887                | -0.122174 |
+| **date_minus_issuing_date**   | 0.003824          | 0.022887                  | 1.000000                | -0.149505 |
+| **chunk_id**                  | 0.022387          | -0.122174                 | -0.149505               | 1.000000 |
 
 
 #### Histogram of the date_minus_issuing_date belonging to the customers that leave the company 
