@@ -241,7 +241,11 @@ Based on the feature importance analysis, it is evident that
 
 are the most influential features in predicting customer churn.
 
-##### XGBOOST model explanation
+##### XGBOOST model explanation: 
+
+1. SHAP (SHapley Additive exPlanations)
+2. 
+
 ###### SHAP (SHapley Additive exPlanations)
 
 Based on game theory, SHAP assigns an importance value to each feature for a given prediction.
