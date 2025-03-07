@@ -227,6 +227,8 @@ I applied three classification models: Logistic Regression, Random Forest, and X
 | **plan_type_Premium**           | 61.0        |
 | **plan_type_Standard**          | 96.0        |
 
+
+
 ### Conclusion
 
 The model achieved a strong performance, with XGBoost yielding the highest accuracy of 0.75, followed by Random Forest (0.74) and Logistic Regression (0.69).
@@ -239,4 +241,8 @@ Based on the feature importance analysis, it is evident that
 
 are the most influential features in predicting customer churn.
 
+##### XGBOOST model explanation
+###### SHAP (SHapley Additive exPlanations)
+
+Based on game theory, SHAP assigns an importance value to each feature for a given prediction.
 
