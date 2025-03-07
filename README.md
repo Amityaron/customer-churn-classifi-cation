@@ -270,7 +270,8 @@ Explanation of Terms:
  SHAP values have the following key properties that make them attractive for model interpretability:
 
 Local Accuracy (Model Explanation): The sum of the SHAP values for all features is equal to the model’s prediction. That is, for a given instance $x$
- we have:
+
+we have:
  
 $f(x)=\sum^{d}_{i=1}\phi_i(f)+\phi_{bias}$
   
