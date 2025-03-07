@@ -252,7 +252,7 @@ are the most influential features in predicting customer churn.
 
 Based on game theory, SHAP assigns an importance value to each feature for a given prediction.
 
-SHAP aims to fairly assign a value to each feature $x_i$
+SHAP aims to fairly assign a value to each feature $x_i$ in our case we have 7 features.
 
 based on its contribution to the model’s prediction for an instance.
 
@@ -269,11 +269,17 @@ Explanation of Terms:
 
  SHAP values have the following key properties that make them attractive for model interpretability:
 
-Local Accuracy (Model Explanation): The sum of the SHAP values for all features is equal to the model’s prediction. That is, for a given instance $x$
+Local Accuracy (Model Explanation): The sum of the SHAP values for all features is equal to the model’s prediction. 
+
+That is, for a given instance $x$
 
 we have:
 
+$d=7$
+
+
 $f(x) = \sum_{i=1}^{d} \phi_i(f) + \phi_{\text{bias}}$
+
 
   
 
