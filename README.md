@@ -241,7 +241,7 @@ Based on the feature importance analysis, it is evident that
 
 are the most influential features in predicting customer churn.
 
-##### XGBOOST model explanation: 
+#### XGBOOST model explanation: 
 
 1. SHAP (SHapley Additive exPlanations)
 2. XGBOOST model explanation
@@ -254,5 +254,14 @@ Based on game theory, SHAP assigns an importance value to each feature for a giv
 
 $\phi_i = \sum_{S \subseteq N \setminus \{i\}} \frac{|S|! (|N| - |S| - 1)!}{|N|!} \left[ f(S \cup \{i\}) - f(S) \right]$
 
+Explanation of Terms:
 
+* $S$: A subset of all features except feature $i$
+* $N$ :  The set of all features.
+* $f(S)$ : The model’s prediction when using only the features in subset $S$
+*  $f(S∪{i}):$ The model’s prediction when feature $i$ is added to $S$
+* $\left|S\right|! \cdot \frac{\left|\left|N\right|\right| - \left|\left|S\right|\right| - 1!}{\left|\left|N\right|\right|!}$ :A weight that ensures all subsets are considered fairly
+
+  
+  
 
