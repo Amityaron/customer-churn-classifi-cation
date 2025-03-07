@@ -285,46 +285,44 @@ $d=7$
 
 The key idea is to combine multiple weak models (trees) to create a stronger predictive model.
 
-## Core Concept:
+###### Core Concept:
 
-### 1. Boosting:
+###### 1. Boosting:
 XGBoost is based on **gradient boosting**, which builds trees sequentially. Each new tree tries to correct the errors (residuals) of the previous tree. In mathematical terms, the model prediction at step \( t \) is updated as:
 
-\[
-F_t(x) = F_{t-1}(x) + \eta \cdot h_t(x)
-\]
+$F_t(x) = F_{t-1}(x) + \eta \cdot h_t(x)$
+
 
 Where:
 - \( F_{t-1}(x) \) is the prediction from the previous step.
 - \( \eta \) is the **learning rate** (a regularization parameter).
 - \( h_t(x) \) is the new tree being added at step \( t \).
 
-### 2. Loss Function:
+###### 2. Loss Function:
 XGBoost minimizes a **regularized loss function** that combines the residual error and a penalty for the complexity of the tree. The objective function to minimize is:
 
-\[
-L(\theta) = \sum_{i=1}^{n} \ell(y_i, \hat{y}_i) + \sum_{k=1}^{T} \Omega(f_k)
-\]
+
+$L(\theta) = \sum_{i=1}^{n} \ell(y_i, \hat{y}_i) + \sum_{k=1}^{T} \Omega(f_k)$
 
 Where:
 - \( \ell(y_i, \hat{y}_i) \) is the loss function (e.g., mean squared error for regression or log loss for classification).
 - \( \Omega(f_k) = \gamma T_k + \frac{1}{2} \lambda ||w_k||^2 \) is the regularization term that penalizes the complexity of each tree (measured by the number of leaves \( T_k \) and the leaf weights \( w_k \)).
 
-### 3. Tree Structure:
-Each decision tree \( h_t(x) \) is built by iterating over the data to find the best split for each node, minimizing the residual errors.
+###### 3. Tree Structure:
+Each decision tree $\( h_t(x) \)$ is built by iterating over the data to find the best split for each node, minimizing the residual errors.
 
-## Optimization:
+###### Optimization:
 
 XGBoost uses **second-order derivatives** (i.e., the gradient and the Hessian) to perform optimization more efficiently, making it faster and more accurate. The update rule for the model parameters \( w \) is:
 
-\[
-w_{t+1} = w_t - \eta \cdot \frac{\partial L}{\partial w_t}
-\]
+
+$w_{t+1} = w_t - \eta \cdot \frac{\partial L}{\partial w_t}$
+
 
 Where:
 - \( \frac{\partial L}{\partial w_t} \) is the gradient of the loss with respect to the model parameters.
 
-## Key Features:
+###### Key Features:
 - **Regularization**: Both L1 and L2 regularization help prevent overfitting.
 - **Parallelization**: XGBoost speeds up training by parallelizing tree construction and computation of gradients.
 - **Handling Missing Data**: It automatically handles missing values by learning how to deal with them during training.
