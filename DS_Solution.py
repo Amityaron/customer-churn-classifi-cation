@@ -115,7 +115,7 @@ def save_pred_csv(df,xgb_model):
   df_original['churn_predicted'] = churn_predictions
 
   # Save the dataframe with the predicted churn column to a new CSV file
-  datacsv.to_csv('your_dataset_with_predictions.csv', index=False)
+  df_original.to_csv('your_dataset_with_predictions.csv', index=False)
 
   # Print the first few rows to check the added column
   print(datacsv.head())
@@ -123,6 +123,6 @@ def save_pred_csv(df,xgb_model):
 
 
 
-df=ReadCSVfile("G:\My Drive\חיפוש עבודה\New folder (5)\churn_data (4).csv")
+df=ReadCSVfile("\churn_data (4).csv")
 xgb_model=XGBOOST_model(df)
 save_pred_csv(df,xgb_model)
