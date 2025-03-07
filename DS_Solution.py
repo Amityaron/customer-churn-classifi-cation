@@ -114,10 +114,6 @@ def save_pred_csv(df,xgb_model):
   # Add the churn predictions back to the original dataset
   df_original['churn_predicted'] = churn_predictions
 
-  file_path = "churn_data (4).csv"  # Replace with actual file path
-  datacsv = pd.read_csv(file_path, parse_dates=['date', 'issuing_date'])
-  datacsv['churn_predicted'] = churn_predictions
-
   # Save the dataframe with the predicted churn column to a new CSV file
   datacsv.to_csv('your_dataset_with_predictions.csv', index=False)
 
