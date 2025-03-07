@@ -239,7 +239,7 @@ I applied three classification models: Logistic Regression, Random Forest, and X
 
 ### Conclusion
 
-The model achieved a strong performance, with XGBoost yielding the highest accuracy of 0.75, followed by Random Forest (0.74) and Logistic Regression (0.69).
+The model achieved a strong performance, with XGBoost yielding the highest accuracy of 0.90, followed by Random Forest (0.83) and Logistic Regression (0.71).
 
 Based on the feature importance analysis, it is evident that 
 
