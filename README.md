@@ -129,104 +129,112 @@ I applied three classification models: Logistic Regression, Random Forest, and X
  
 ##### Logistic regression performance  : 
 
+
+
 ###### Accuracy  
-**Accuracy:** 0.69  
+**Accuracy:** 0.71  
 
 ###### Confusion Matrix  
 | Actual \ Predicted | 0  | 1  |
 |--------------------|----|----|
-| **0** (Stay)      | 151 | 12 |
-| **1** (Churn)     | 62  | 15 |
+| **0** (Stay)      | 153 | 10 |
+| **1** (Churn)     | 60  | 17 |
 
-###### Classification Report
+###### Classification Report  
 
 | Class               | Precision | Recall | F1-Score | Support |
 |---------------------|-----------|--------|----------|---------|
-| **0** (Stay)        | 0.71      | 0.93   | 0.80     | 163     |
-| **1** (Churn)       | 0.56      | 0.19   | 0.29     | 77      |
-| **Accuracy**        |           |        | 0.69     | 240     |
-| **Macro Avg**       | 0.63      | 0.56   | 0.55     | 240     |
-| **Weighted Avg**    | 0.66      | 0.69   | 0.64     | 240     |
-
+| **0** (Stay)        | 0.72      | 0.94   | 0.81     | 163     |
+| **1** (Churn)       | 0.63      | 0.22   | 0.33     | 77      |
+| **Accuracy**        |           |        | 0.71     | 240     |
+| **Macro Avg**       | 0.67      | 0.58   | 0.57     | 240     |
+| **Weighted Avg**    | 0.69      | 0.71   | 0.66     | 240     |
 
 ###### Feature Importance  
+
 | Feature                         | Coefficient  |
 |---------------------------------|--------------|
-| **date_mouth**                  | 0.790085     |
-| **transaction_amount**          | 0.054664     |
-| **plan_type_Premium**           | -0.013193    |
-| **plan_type_Standard**          | -0.051589    |
-| **plan_changes**                | -0.057033    |
-| **plan_changes_total_changes**  | -0.193752    |
-| **date_minus_issuing_date**     | -0.421579    |
+| **date_mouth**                  | 0.804456     |
+| **transaction_amount**          | 0.058123     |
+| **plan_type_Premium**           | -0.013092    |
+| **plan_type_Standard**          | -0.054059    |
+| **plan_changes**                | -0.054871    |
+| **chunk_id**                    | -0.202946    |
+| **plan_changes_total_changes**  | -0.226702    |
+| **date_minus_issuing_date**     | -0.452507    |
 
 
 ##### Random Forest performance : 
  
+
+
 ###### Accuracy  
-**Accuracy:** 0.74  
+**Accuracy:** 0.83  
 
 ###### Confusion Matrix  
 | Actual \ Predicted | 0  | 1  |
 |--------------------|----|----|
-| **0** (Stay)       | 145 | 18 |
-| **1** (Churn)      | 45  | 32 |
+| **0** (Stay)      | 153 | 10 |
+| **1** (Churn)     | 31  | 46 |
 
-###### Classification Report
+###### Classification Report  
 
 | Class               | Precision | Recall | F1-Score | Support |
 |---------------------|-----------|--------|----------|---------|
-| **0** (Stay)        | 0.76      | 0.89   | 0.82     | 163     |
-| **1** (Churn)       | 0.64      | 0.42   | 0.50     | 77      |
-| **Accuracy**        |           |        | 0.74     | 240     |
-| **Macro Avg**       | 0.70      | 0.65   | 0.66     | 240     |
-| **Weighted Avg**    | 0.72      | 0.74   | 0.72     | 240     |
+| **0** (Stay)        | 0.83      | 0.94   | 0.88     | 163     |
+| **1** (Churn)       | 0.82      | 0.60   | 0.69     | 77      |
+| **Accuracy**        |           |        | 0.83     | 240     |
+| **Macro Avg**       | 0.83      | 0.77   | 0.79     | 240     |
+| **Weighted Avg**    | 0.83      | 0.83   | 0.82     | 240     |
 
-###### Feature Importance  
+## Feature Importance  
+
 | Feature                         | Importance  |
 |---------------------------------|-------------|
-| **date_minus_issuing_date**     | 0.292386    |
-| **transaction_amount**          | 0.276920    |
-| **date_mouth**                  | 0.198031    |
-| **plan_changes_total_changes**  | 0.155698    |
-| **plan_type_Standard**          | 0.027657    |
-| **plan_changes**                | 0.025918    |
-| **plan_type_Premium**           | 0.023391    |
+| **chunk_id**                    | 0.243748    |
+| **date_minus_issuing_date**     | 0.223735    |
+| **transaction_amount**          | 0.184039    |
+| **date_mouth**                  | 0.160879    |
+| **plan_changes_total_changes**  | 0.122486    |
+| **plan_type_Standard**          | 0.023030    |
+| **plan_changes**                | 0.021459    |
+| **plan_type_Premium**           | 0.020624    |
 
 
 
 ##### XGBOOST performance: 
 
 ###### Accuracy  
-**Accuracy:** 0.75  
+**Accuracy:** 0.90  
 
 ###### Confusion Matrix  
 | Actual \ Predicted | 0  | 1  |
 |--------------------|----|----|
-| **0** (Stay)       | 140 | 23 |
-| **1** (Churn)      | 36  | 41 |
+| **0** (Stay)      | 156 | 7  |
+| **1** (Churn)     | 16  | 61 |
 
-###### Classification Report
+###### Classification Report  
 
 | Class               | Precision | Recall | F1-Score | Support |
 |---------------------|-----------|--------|----------|---------|
-| **0** (Stay)        | 0.80      | 0.86   | 0.83     | 163     |
-| **1** (Churn)       | 0.64      | 0.53   | 0.58     | 77      |
-| **Accuracy**        |           |        | 0.75     | 240     |
-| **Macro Avg**       | 0.72      | 0.70   | 0.70     | 240     |
-| **Weighted Avg**    | 0.75      | 0.75   | 0.75     | 240     |
+| **0** (Stay)        | 0.91      | 0.96   | 0.93     | 163     |
+| **1** (Churn)       | 0.90      | 0.79   | 0.84     | 77      |
+| **Accuracy**        |           |        | 0.90     | 240     |
+| **Macro Avg**       | 0.90      | 0.87   | 0.89     | 240     |
+| **Weighted Avg**    | 0.90      | 0.90   | 0.90     | 240     |
 
 ###### Feature Importance  
-| Feature                         | Importance  |
-|---------------------------------|-------------|
-| **transaction_amount**          | 736.0       |
-| **date_minus_issuing_date**     | 695.0       |
-| **date_mouth**                  | 242.0       |
-| **plan_changes**                | 37.0        |
-| **plan_changes_total_changes**  | 358.0       |
-| **plan_type_Premium**           | 61.0        |
-| **plan_type_Standard**          | 96.0        |
 
+| Feature                         | Importance |
+|---------------------------------|------------|
+| **chunk_id**                    | 752.0      |
+| **date_minus_issuing_date**     | 504.0      |
+| **transaction_amount**          | 326.0      |
+| **plan_changes_total_changes**  | 196.0      |
+| **date_mouth**                  | 162.0      |
+| **plan_type_Standard**          | 35.0       |
+| **plan_type_Premium**           | 24.0       |
+| **plan_changes**                | 16.0       |
 
 
 ### Conclusion
@@ -238,6 +246,8 @@ Based on the feature importance analysis, it is evident that
 1. transaction_amount
 2. date_minus_issuing_date
 3. date_month
+4. chunk_id (Verify when you split the data to train&test you don't cut customer in the middle of the year )
+   * Pay attention that if a customer churns from the company, he will not return.
 
 are the most influential features in predicting customer churn.
 
